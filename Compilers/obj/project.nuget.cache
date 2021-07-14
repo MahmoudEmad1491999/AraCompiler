@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Uqc1zN5OLRd0jmbTqj1WD0Ei7eF2PQOJFz17qZzpZ9avIvPHsNehWAOKIO3tqv5RLKn4zuAQsiF4FQBhq9phoA==",
+  "success": true,
+  "projectFilePath": "/home/mahmoudee/Documents/csharp/Compilers/Compilers.csproj",
+  "expectedPackageFiles": [
+    "/home/mahmoudee/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
