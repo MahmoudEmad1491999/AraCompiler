@@ -5,7 +5,7 @@ namespace Compilers.Scanner
 
     public class Tokenizer
     {
-        TranslatioConsole.WriteLine(ts.peekNextToken());nUnit translationUnit;
+        public TranslationUnit translationUnit;
 
         public                  Tokenizer(TranslationUnit translationUnit)
         {

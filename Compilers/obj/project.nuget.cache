@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uqc1zN5OLRd0jmbTqj1WD0Ei7eF2PQOJFz17qZzpZ9avIvPHsNehWAOKIO3tqv5RLKn4zuAQsiF4FQBhq9phoA==",
+  "dgSpecHash": "3L2ygVTIUx6cqxfQWS9/JAMEddNhHHiZRnE4nvI8R7726E2nRvVBaFAwikcnr8nQKYQmOI8BD4c0uBQBdbZuqA==",
   "success": true,
-  "projectFilePath": "/home/mahmoudee/Documents/csharp/Compilers/Compilers.csproj",
-  "expectedPackageFiles": [
-    "/home/mahmoudee/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "c:\\Users\\NOMMRHNE\\Documents\\csharp\\AraCompiler\\Compilers\\Compilers.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

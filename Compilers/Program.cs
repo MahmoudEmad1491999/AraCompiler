@@ -12,8 +12,8 @@ namespace Compilers
         static void Main(string[] args)
         {
             
-            string path = "/home/mahmoudee/Documents/csharp/Compilers/test_cases/";
-            string fullName = path + "file.arac";
+            string fullName = "C:\\Users\\NOMMRHNE\\Documents\\csharp\\AraCompiler\\Compilers\\test_cases\\file.arac";
+            
             Console.WriteLine(fullName);
 
             string text = File.ReadAllText(fullName);
