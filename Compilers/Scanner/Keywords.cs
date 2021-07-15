@@ -15,6 +15,7 @@ namespace Compilers.Scanner
             values.Add("طالما");
             values.Add("رجوع");
             values.Add("الناتج");
+            
         }
         public static TokenType GetTokenType(string str) {
             switch(str){

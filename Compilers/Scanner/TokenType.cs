@@ -15,16 +15,17 @@ namespace Compilers.Scanner
 
         FUNCTION,
         OPERATION,
-        
+
         RESULT,
         REUTRN,
 
 
-        IDENTIFIER,       
+        IDENTIFIER,
         ADD,
         SUB,
         MUL,
         DIV,
+        ASSIGN,
         FASLA,
         FASLANOQTA,
         RCURLY,
@@ -33,8 +34,8 @@ namespace Compilers.Scanner
         LBOW,
         RSQUARE,
         LSQUARE,
-        ASSIGN,        
 
+        INT_LITERAL,
 
     }
 }

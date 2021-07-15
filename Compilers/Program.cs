@@ -11,29 +11,27 @@ namespace Compilers
     {
         static void Main(string[] args)
         {
-            
+
             string fullName = "C:\\Users\\NOMMRHNE\\Documents\\csharp\\AraCompiler\\Compilers\\test_cases\\file.arac";
-            
             Console.WriteLine(fullName);
 
             string text = File.ReadAllText(fullName);
             Console.WriteLine(text);
 
-
             TranslationUnit translation_unit = new TranslationUnit(text);
-            
+
             Tokenizer tokenizer = new Tokenizer(translation_unit);
 
-            List<Token> token_list = tokenizer.getTokens();
-            
+            Token[] token_list = tokenizer.getTokens();
 
 
-            TokenSequence ts = new TokenSequence(token_list.ToArray());
-            foreach(var token in ts.tokenString) 
+
+            TokenSequence ts = new TokenSequence(token_list);
+            foreach (var token in ts.tokenString)
             {
                 Console.WriteLine(token);
             }
-            
+
             return;
         }
     }

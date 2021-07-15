@@ -39,7 +39,6 @@ namespace Compilers.Parser {
             return ")" + first.ToString() + " / " + second.ToString() + " ("; 
         }
     }
-
     public class AssNode : Node 
     {
         public Node variable;
@@ -51,4 +50,12 @@ namespace Compilers.Parser {
         }
     }
     
+    public class Id: Node 
+    {
+        public string id_literal;
+        public Id(string id_literal)
+        {
+            this.id_literal = id_literal;
+        }
+    }
 }

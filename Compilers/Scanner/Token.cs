@@ -3,15 +3,15 @@ namespace Compilers.Scanner
     public class Token {
         public TokenType tokenType;
         public int line;
-        public object value;
+        public string value;
 
         public Token(TokenType tokenType, int line){
             this.tokenType = tokenType;
             this.line = line;
-            this.value = null;
+            this.value = "";
         }
 
-        public Token(TokenType tokenType, int line, object value)
+        public Token(TokenType tokenType, int line, string value)
         {
             this.tokenType = tokenType;
             this.line = line;
@@ -21,13 +21,10 @@ namespace Compilers.Scanner
         public override string ToString()
         {
             return this.tokenType.ToString() + ": " +
-            (this.value ?? "\"\"" )+
+            this.value +
             ", line: " + this.line;
         }
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
+        
         
     }
 }

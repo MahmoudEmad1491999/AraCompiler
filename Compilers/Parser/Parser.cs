@@ -19,7 +19,11 @@ namespace Compilers.Parser
 
         public Node parseExpression() 
         {
-                       
+            if(tokenSequence.peekNextType() == TokenType.IDENTIFIER)
+            {
+                tokenSequence.consumed++;
+                return new Id(tokenSequence.peekNextToken().value);
+            }
             return null;
         }
     }
