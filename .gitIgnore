@@ -1,4 +1,4 @@
-Compilers/bin
-Compilers/obj
-test_cases
-.vscode
+Compilers/bin/
+Compilers/obj/
+test_cases/
+.vscode/

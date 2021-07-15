@@ -7,11 +7,11 @@ namespace Compilers.Scanner
     {
         public TranslationUnit translationUnit;
 
-        public                  Tokenizer(TranslationUnit translationUnit)
+        public Tokenizer(TranslationUnit translationUnit)
         {
             this.translationUnit = translationUnit;
         }
-        public  List<Token>     getTokens() 
+        public List<Token> getTokens() 
         {
             List<Token> result = new List<Token>();
             Token temp = getNextToken();
@@ -21,7 +21,7 @@ namespace Compilers.Scanner
             }
             return result;
         }
-        private Token           getNextToken()
+        private Token getNextToken()
         {
             if (translationUnit.hasnext())
             {
@@ -106,7 +106,7 @@ namespace Compilers.Scanner
                 return new Token(TokenType.EOF, translationUnit.countedLines);
             }
         }
-        private Token           handleIdentifiers()
+        private Token handleIdentifiers()
         {
             StringBuilder possible_identifer_builder = new StringBuilder();
             
@@ -127,14 +127,14 @@ namespace Compilers.Scanner
                 return new Token(TokenType.IDENTIFIER, translationUnit.countedLines, possible_identifer);
             }
         }
-        private void            handleNewLines()
+        private void handleNewLines()
         {
             while(translationUnit.nextIs('\n')){
                 translationUnit.incConsumed();
                 translationUnit.incCountedLines();
             }
         }
-        private void            handleWhiteSpaces()
+        private void handleWhiteSpaces()
         {
             while(translationUnit.nextIs(' ') || translationUnit.nextIs('\t')){
                 translationUnit.incConsumed();
