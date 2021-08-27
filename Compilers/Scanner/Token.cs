@@ -1,11 +1,13 @@
-namespace Compilers.Scanner 
+namespace Compilers.Scanner
 {
-    public class Token {
+    public class Token
+    {
         public TokenType tokenType;
         public int line;
         public string value;
 
-        public Token(TokenType tokenType, int line){
+        public Token(TokenType tokenType, int line)
+        {
             this.tokenType = tokenType;
             this.line = line;
             this.value = "";
@@ -24,7 +26,7 @@ namespace Compilers.Scanner
             this.value +
             ", line: " + this.line;
         }
-        
-        
+
+
     }
 }
