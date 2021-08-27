@@ -1,30 +1,51 @@
 ﻿// Grammar for the basic language that i try to make
 
 
-<prim_exp>	:= <numeric_constant> || <id>
+<prim_exp>							:= <Numeric_Const>
+									:= <Boolean_Const>
+									:= <ID>
+									:= <function_call>
 
-<num_const> := <byte_const>
-			:= <sbyte_const>
-			:= <word_const>
-			:= <sword_const>
-			:= <int_cont>
-			:= <sint_const>
-			:= <long_const>
-			:= <slong_const>
+<num_const>							:= <byte_const>
+									:= <sbyte_const>
+									:= <word_const>
+									:= <sword_const>
+									:= <int_cont>
+									:= <sint_const>
+									:= <long_const>
+									:= <slong_const>
+
+<Boolean_Const>						:= "True"
+									:= "False"			
+
 
 // add subtract mul div rem
-<arith_exp> := <arit_fun> "(" <arith_exp> || <prim_exp>  "," <arith_exp> || <prim_exp> ")"
+<arith_exp>							:= <arit_fun> "(" <arith_exp> || <prim_exp>  "," <arith_exp> || <prim_exp> ")"
 
 // bigger smaller bigger_that_equal smaller_than_equal equal not_equal
-<relat_exp> := <relat_fun> "(" <relat_exp> || <prim_exp> "," <relat_exp> || <prim_exp> ")"
+<relat_exp>							:= <relat_fun> "(" <relat_exp> || <prim_exp> "," <relat_exp> || <prim_exp> ")"
 
 // And Or Not
-<log_exp>	:= <b_log_fun> "(" <log_exp> || <prim_exp> ","  <log_exp> || <prim_exp> ")"
-			:= <u_log_fun> "(" <log_exp> || <prim_exp> ")"
+<log_exp>							:= <b_log_fun> "(" <log_exp> || <prim_exp> ","  <log_exp> || <prim_exp> ")"
+									:= <u_log_fun> "(" <log_exp> || <prim_exp> ")"
 
 // bit_and bit_or bit_not bit_xor
 
-<bit_exp>	:= <b_bit_fun> "(" <bit_exp> || <primary_exp> ","  <bit_exp> || <primary_exp> ")"
-			:= <u_bit_fun> "(" <bit_exp> || <primary_exp> ")"
+<bit_exp>							:= <b_bit_fun> "(" <bit_exp> || <primary_exp> ","  <bit_exp> || <primary_exp> ")"
+									:= <u_bit_fun> "(" <bit_exp> || <primary_exp> ")"
 
-<assign_statement>	:= <assign_operator> "(" <Id> "," <prim_exp> ");"
+<assign_statement>					:= <assign_operator> "(" <Id> "," <prim_exp> ");"
+
+<operation_call>					:= "do" <id> <paramter_list> ";" 
+<function_call>						:= "call" <id> <paramter_list>
+
+<paramter_list>						:= "(" <zero_or_more_paramter> ")"
+<zero_or_more_paramter>				:= <eps> || <prim_exp> || <prim_exp> "," <one_or_more_paramter>
+<one_or_more_paramter>				:= <prim_exp> || <prim_exp>	"," <one_or_more_paramter>
+
+<if_statment>						:= "if(" <conditional_exp> "){" <statement_list> "}"
+<if_else_statment>					:= "if(" <conditional_exp> "){" <statement_list> "}else{" <statement_list> "}"
+<while_statement>					:= "while(" <conditional_exp> "){" <statment_list> "}"
+<until_statment>					:= "until(" <conditional_exp> "){" <statment_list> "}"
+
+ 
